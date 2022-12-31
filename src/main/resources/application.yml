@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: dev
+#  application:
+#    name: dev-app
+#server:
+#    port: 8088
+#---
+#spring:
+#  config:
+#    activate:
+#      on-profile: prod
+#  application:
+#    name: prod-app
+#server:
+#  port: 8000
