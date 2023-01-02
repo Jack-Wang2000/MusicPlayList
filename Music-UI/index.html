@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8" />
@@ -15,26 +15,26 @@
     <div class="searchForSongs">
         <form action="https://netease-cloud-music-api-nine-lake-23.vercel.app/search">
             <label for="keywords">Search for songs</label>
-            <input id="keywords" name="keywords" type="text">
+            <input id="keywords" name="keywords" type="text" required>
             <button type="submit">Search</button>
         </form>
     </div>
     <div class="login">
-        <form action="https://neteasecloudmusicapi.vercel.app/login/cellphone" method="get">
+        <form action="https://neteasecloudmusicapi.vercel.app/login/cellphone" method="post">
             <ul>
                 <li>
                     <label for="tel">phoneNum:</label>
-                    <input type="tel" id="tel" name="tel" placeholder="Please input your Netease account's phone number"
-                        autofocus>
+                    <input type="tel" id="tel" name="tel" placeholder="Input your Netease account's phone number"
+                    autofocus required pattern="[0-9]+" minlength="11" maxlength="11">
                 </li>
                 <li>
                     <label for="passwd">passwd:</label>
-                    <input type="password" id="passwd" name="passwd">
+                    <input type="password" id="passwd" name="passwd" required>
                 </li>
                 <li class="button">
                     <button type="submit" id="submit">Log in</button>
                 </li>
-                <li><input type="hidden" id="timestamp" name="timestamp"></li>
+                <li><input type="hidden" id="timestamp" name="timestamp" value="1/1/2023 18:09"></li>
             </ul>
         </form>
     </div>

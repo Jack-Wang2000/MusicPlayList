@@ -20,3 +20,9 @@
 //     +'&password='+passwd.textContent;
 
 // }
+let phoneNum=document.getElementById("tel");
+phoneNum.addEventListener("input",()=>{
+    if(phoneNum.validity.tooShort){
+        phoneNum.setCustomValidity("Tel number is set to be 11 numbers")
+    }
+})

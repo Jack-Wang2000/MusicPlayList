@@ -68,7 +68,7 @@ form {
     font: 1em sans-serif;
   
     /* 使所有文本输入框大小相同 */
-    width: 350px;
+    width: 330px;
     box-sizing: border-box;
   
     /* 调整文本输入框的边框样式 */
@@ -100,4 +100,10 @@ form {
     /* 这个外边距的大小与 label 和文本输入框之间的间距差不多 */
     margin-left: .5em;
   }
-  
+  input:invalid{
+      border: 2px darkred;
+  }
+
+  input:valid{
+      border: 2px black;
+  }
