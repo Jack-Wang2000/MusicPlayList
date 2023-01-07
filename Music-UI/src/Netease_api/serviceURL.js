@@ -1,5 +1,5 @@
 const nodeServer={
-    API_ROOT:"http://localhost:3000",
+    API_ROOT:"https://netease-cloud-music-api-1g5y.vercel.app",
     method:"get"
 };
 const apiURL = {

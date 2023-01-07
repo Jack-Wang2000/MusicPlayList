@@ -1,0 +1,1 @@
+INSERT INTO `user` (`phoneNum`, `name`, `passwd`, `picURL`, `phone_num`) VALUES ('18055143397', 'wj', 'wj', 'https://avatars.githubusercontent.com/u/56106412?s=400&u=4e6f06e1921f385f3f77b711a91ad2fdea4a4879&v=4', '');

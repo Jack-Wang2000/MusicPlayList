@@ -73,15 +73,13 @@ function handleMark(e) {
     const init={
         method: "POST",
         headers:{
-            "Content-Type":'application/json'
+            "Content-Type":'application/json',
     },
-        mode:"no-cors",
         body: JSON.stringify(data)
     }//data for request
     let req = fetch(serverURL.mark,init);
-    req.then(() => {
-        const fail = document.createElement('p');
-        fail.textContent = "Mark success!";
+    req.then(res => {
+        alert(res.body);
     }).catch(err=>{
         alert(err.toString());
     })
