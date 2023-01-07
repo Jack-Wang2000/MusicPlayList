@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
@@ -14,13 +15,13 @@ import org.hibernate.validator.constraints.Length;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Song {
-    @Id@NotEmpty
+    @Id@NotNull
     private Long id;
     @Column@NotEmpty
     private String name;
+    @Column@NotNull
+    private int artist_id;
     @Column@NotEmpty
-    private String artist_id;
-    @Column@NotEmpty
-    @Length(min = 11,max = 11)
+    @Length(min = 11,max = 11,message = "phone length error!")
     private String usr_phone;
 }

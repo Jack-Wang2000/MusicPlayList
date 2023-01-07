@@ -1,6 +1,6 @@
 package com.OnegJack.Music;
 
-import com.OnegJack.Music.controllers.LoginController;
+import com.OnegJack.Music.controllers.IndexController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +18,7 @@ class MusicApplicationTests {
 
 	@BeforeEach
 	public void setUp() throws Exception{
-		mvc= MockMvcBuilders.standaloneSetup(new LoginController()).build();
+		mvc= MockMvcBuilders.standaloneSetup(new IndexController()).build();
 	}
 	@Test
 	public void getLogin()throws Exception{

@@ -1,21 +1,25 @@
 package com.OnegJack.Music.controllers;
 
-import com.OnegJack.Music.domain.User;
-import com.OnegJack.Music.domain.UserRepository;
+import com.OnegJack.Music.domain.*;
+import com.OnegJack.Music.service.SongService;
 import com.OnegJack.Music.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class LoginController {
+public class IndexController {
     @Autowired
     UserService userService;
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    SongService songService;
+    @Autowired
+    SongRepository songRepository;
+    @Autowired
+    ArtistRepository artistRepository;
     @RequestMapping(value = "/login",consumes = "application/json")
     public String login(@RequestBody@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
@@ -24,6 +28,15 @@ public class LoginController {
             return "success";
         }else {
             return "fail!";
+        }
+    }
+    @PostMapping("/mark")
+    public String mark(@RequestBody Song song){
+        if(songRepository.existsById(song.getId())){
+            return "Already in favorite!";
+        }else {
+            songRepository.save(song);
+            return "Mark Success!";
         }
     }
 }
