@@ -10,12 +10,4 @@ public class UserService {
     @Autowired
     UserRepository userRepository;
 
-    public boolean addUser(User user){
-        if(userRepository.existsById(user.getPhoneNum())){
-            return false;
-        }else {
-            userRepository.save(user);
-            return true;
-        }
-    }
 }

@@ -15,7 +15,7 @@ import org.hibernate.validator.constraints.Length;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Song {
-    @Id@NotNull
+    @Id@NotNull()
     private Long id;
     @Column@NotEmpty
     private String name;
