@@ -5,7 +5,7 @@ spring:
         url: jdbc:mysql://localhost:3306/music
         username: root
         password: root
-        driver-class-name: com.mysql.cj.jdbc.Driver
+        driver-class-name: com.mysql
         dbcp2:
             initial-size: 5
             min-idle: 10
@@ -18,4 +18,3 @@ spring:
         open-in-view: true
         hibernate:
             ddl-auto: update
-            format_sql: true
